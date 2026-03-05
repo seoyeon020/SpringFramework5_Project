@@ -1,5 +1,8 @@
 package myspring.di.annot;
 
+import org.springframework.stereotype.Component;
+
+@Component("consolPrinter")
 public class ConsolePrinterBean implements IPrinter {
 	
 	public ConsolePrinterBean() {

@@ -6,6 +6,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	<!-- DI 전략1에 해당하는 Config file -->
+	
 	<!-- StringPrinter 클래스를 SpringBean으로 설정 -->
 	<bean id="strPrinter" class="myspring.di.xml.StringPrinter" />
 	
