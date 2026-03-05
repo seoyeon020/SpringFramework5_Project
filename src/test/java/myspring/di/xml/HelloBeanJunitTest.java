@@ -26,6 +26,8 @@ public class HelloBeanJunitTest {
 		
 		assertSame(helloById, helloByType);
 		
+		assertEquals("Hello 스프링", helloByType.sayHello());
+		
 	}
 
 }
