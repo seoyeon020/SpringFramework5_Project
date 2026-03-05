@@ -10,22 +10,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HelloBean {
-	@Value("어노테이션")
+public class HelloBeanCons {
 	String name;
 	
-//	@Autowired
-//	@Qualifier("stringPrinter")
-	@Resource(name = "stringPrinter")
 	IPrinter printer;
 	
 	List<String> names;
 
-	public HelloBean() {
+	public HelloBeanCons() {
 		System.out.println(this.getClass().getName() + " 기본생성자 호출됨!");
 	}
 
-	public HelloBean(String name, IPrinter printer) {
+	@Autowired
+	public HelloBeanCons(@Value("생성자어노테이션") String name,
+						 @Qualifier("consolePrinter") IPrinter printer) {
 		System.out.println(this.getClass().getName() + " 오버로딩 생성자 호출됨!");
 		this.name = name;
 		this.printer = printer;
